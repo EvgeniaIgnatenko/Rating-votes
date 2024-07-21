@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг голосов</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <script src="./script.js" defer ></script>
+
+</head>
+<body>
+      <div class="wrapper">
+        <h1>Рейтинг и голосование</h1>
+        <div class="rating">
+            <div class="rating__common">
+              <div class="rating__circle">
+                <svg class="cirkle" viewBox="0 0 100 100">
+                    <linearGradient id="gradient" x1="0%" 
+                    y1="0%" x2="0%" y2="100%">
+                   <stop offset="0%" class="stroke-color-1"></stop>
+                   <stop offset="100%" class="stroke-color-2"></stop>
+                   </linearGradient>
+                   <circle class="stroke" r="9.55%" cx="50%" cy="50%" ></circle>
+                   <circle id="rating-stroke" class="segment" r="9.55%" cx="50%" cy="50%" 
+                   stroke="url(#gradient)"></circle>
+                   </svg>
+              </div>
+              <div id="rating-total" class="rating__common-total">0</div>
+              <div>Общий рейтинг</div>
+              <div class="rating__common-votes">
+                <div>Количество голосов</div>
+                <div id="rating-votes-total">0</div>
+              </div>
+            </div>
+            <div class="rating__individual">
+            <div class="rating__vote-wrap">
+                <div class="rating__vote-count">
+                  <span>Голосов:&nbsp;</span>
+                  <span id="rating-5-votes">0</span>
+                </div>
+                <div class="rating__progress-bar">
+                    <div id="rating-5-progress" class="rating__progress">
+                     <span>5</span>
+                     <span>★</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rating__vote-wrap">
+              <div class="rating__vote-count">
+                <span>Голосов:&nbsp;</span>
+                <span id="rating-4-votes">0</span>
+              </div>
+              <div class="rating__progress-bar">
+                  <div id="rating-4-progress" class="rating__progress">
+                   <span>4</span>
+                   <span>★</span>
+                  </div>
+              </div>
+          </div>
+          <div class="rating__vote-wrap">
+            <div class="rating__vote-count">
+              <span>Голосов:&nbsp;</span>
+              <span id="rating-3-votes">0</span>
+            </div>
+            <div class="rating__progress-bar">
+                <div id="rating-3-progress" class="rating__progress">
+                 <span>3</span>
+                 <span>★</span>
+                </div>
+            </div>
+        </div>
+        <div class="rating__vote-wrap">
+          <div class="rating__vote-count">
+            <span>Голосов:&nbsp;</span>
+            <span id="rating-2-votes">0</span>
+          </div>
+          <div class="rating__progress-bar">
+              <div id="rating-2-progress" class="rating__progress">
+               <span>2</span>
+               <span>★</span>
+              </div>
+          </div>
+      </div>
+      <div class="rating__vote-wrap">
+        <div class="rating__vote-count">
+          <span>Голосов:&nbsp;</span>
+          <span id="rating-1-votes">0</span>
+        </div>
+        <div class="rating__progress-bar">
+            <div id="rating-1-progress" class="rating__progress">
+             <span>1</span>
+             <span>★</span>
+            </div>
+        </div>
+        <fieldset class="form">
+           <legend>Голосование</legend>
+           <div id="form-inputs">
+            <label>
+            1
+            <input type="radio" name="vote"value="1"></label>
+           <label>
+            2
+            <input type="radio" name="vote"value="2"></label>
+           <label>
+            3
+            <input type="radio" name="vote" checked value="3"></label>
+           <label>
+            4
+            <input type="radio" name="vote"value="4"></label>
+           <label>
+            5
+           <input type="radio" name="vote"value="5"></label>
+          </div>
+          <button id="send-vote" class="vote-button">Голосовать</button>
+          </fieldset>
+          
+         
+    </div>
+            
+   
+</body>
+</html>

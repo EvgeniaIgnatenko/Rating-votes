@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --color_1: #ffbc0b;
+    --color_2: #ff7400;
+    --grey: #f1f1f1;
+    --background-image: linear-gradient(-90deg, var(--color_1), var(--color_2));
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1 {
+    margin-bottom: 64px;
+    font-weight: 100;
+}
+.rating {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 64px;
+}
+.rating__common {
+    --size: 250px;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating__common > *:not(:last-child){
+    margin-bottom: 8px;
+}
+.rating__common-total {
+    font-size: 52px;
+    font-weight: bold;
+}
+.rating__common-votes {
+    font-size: 32px;
+    font-weight: 220;
+    text-align: center;
+}
+.rating__common-votes > div:nth-child(1) {
+    font-size: 20px;
+    color: #999;
+}
+.rating__vote-wrap:not(:last-child) {
+    margin-bottom: 8px;
+}
+.rating__vote-count {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.rating__progress-bar {
+  --height: 24px;
+  --radius: 8px;
+    width: 250px;
+    height: var(--height);
+    background-color: #f1f1f1;
+    border-radius: var(--radius);
+}
+.rating__progress {
+    background: var(--background-image);
+    border-radius: var(--radius);
+    min-width: 19%;
+    width: 0;
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: white;
+    transition: width 1s ease-in-out;
+}
+
+.rating__progress span:first-child {
+    opacity: 0.7;
+    font-size: 0.9em;
+    position: relative;
+    top: 1px;
+}
+
+/* Circle-rating */
+.cirkle {
+    --offset: 0;
+    position: absolute;
+    top: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    left: var(--offset);
+    transform: rotate(-90deg);
+}
+
+.stroke,
+.segment {
+    fill: transparent;
+    stroke-width: 0.7px;
+    stroke-dasharray: 0 60;
+    stroke-linecap: round;
+    transform: scale(4.7);
+    transform-origin: center;
+    transition: stroke-dasharray 1s linear;
+}
+
+.stroke {
+    stroke-dasharray: 60 60;
+    stroke: #f1f1f1;
+}
+.stroke-color-1 {
+   stop-color:var(--color_1);
+    
+}
+.stroke-color-2{
+   stop-color:var(--color_2);
+}
+
+/* форма голосования */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form legend {
+    font-size: 14px;
+    font-weight: 200;
+    opacity: 0.7;
+}
+.form label + label{
+  margin-left: 12px;
+}
+
+.vote-button {
+margin-top: 12px auto 0;
+background: var(--background-image);
+border: none;
+padding: 8px;
+font-size: 16px;
+color: white;
+border-radius: 6px;
+}
