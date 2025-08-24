@@ -123,3 +123,4 @@ const domElements = {
              return calculatedPercent
         }
    }
+
