@@ -122,5 +122,6 @@ const domElements = {
            const calculatedPercent = votes[voteIndex] / percent
              return calculatedPercent
         }
-   }
+}
+
 
